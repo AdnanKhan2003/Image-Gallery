@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css" />
+    <script
+      defer
+      src="https://kit.fontawesome.com/e575e376f5.js"
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="script.js"></script>
+  </head>
+  <body>
+    <div class="weather__container">
+      <div class="weather__wrapper">
+        <div class="weather__error hidden">
+          <div class="weather__error__wrapper">
+            <div class="error__icon">
+              <i class="fa-solid fa-triangle-exclamation"></i>
+            </div>
+            <div class="error__content">
+              <p class="error__message">Please enter valid city name</p>
+              <button class="btn error__button">Back</button>
+            </div>
+          </div>
+        </div>
+        <form class="weather__searchbar__container">
+          <input
+            type="search"
+            placeholder="Enter your city"
+            name="search"
+            spellcheck="false"
+            autocomplete="off"
+            class="weather__searchbar"
+            id=""
+          />
+          <div class="text hidden">The Searchbar is empty</div>
+          <div class="weather__search__btn">
+            <img src="./images/search.png" alt="Search" />
+          </div>
+        </form>
+        <div class="weather__hero hidden">
+          <div class="weather__climate__icon">
+            <img src="./images/clouds.png" alt="" />
+          </div>
+          <div class="weather__temperature">
+            <span class="weather__temperature__number">99</span>
+            <span class="weather__temperature__unit">°C</span>
+          </div>
+          <div class="weather__city">Mumbai</div>
+        </div>
+
+        <div class="weather__footer hidden">
+          <div class="weather__row">
+            <div class="weather__col">
+              <div class="weather__data__icon">
+                <img src="./images/humidity.png" alt="" />
+              </div>
+              <div class="weather__text__data">
+                <div class="weather__data humidity">
+                  <span class="weather__data__humidity__number">99</span>
+                  <span class="weather__data__unit"> %</span>
+                </div>
+                <span class="weather__label humidity__label">Humidity</span>
+              </div>
+            </div>
+            <div class="weather__col">
+              <div class="weather__data__icon">
+                <img src="./images/wind.png" alt="" />
+              </div>
+              <div class="weather__text__data">
+                <div class="weather__data wind">
+                  <span class="weather__data__wind__number">99</span>
+                  <span class="weather__data__unit"> km/h</span>
+                </div>
+                <span class="weather__label wind__label">Wind</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

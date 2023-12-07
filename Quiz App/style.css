@@ -1,0 +1,92 @@
+/* IMPORTING FONTS */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+/* BASIC STYLING */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.9%;
+  font-family: "Poppins", sans-serif;
+}
+:root {
+  --hue-neutral: 200;
+  --hue-wrong: 0;
+  --hue-correct: 145;
+}
+
+/* QUIZ APP */
+body {
+  --hue: var(--hue-neutral);
+  background-color: hsl(var(--hue), 100%, 20%);
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.container {
+  width: 60%;
+
+  background-color: #fff;
+  padding: 4rem 4rem;
+  border-radius: 0.4rem;
+}
+.quiz__question {
+  font-size: 2.4rem;
+}
+.quiz__answers__elements {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  gap: 1.7rem;
+  margin: 4rem 0;
+}
+.quiz__options {
+  --hue: var(--hue-neutral);
+  border: 1px solid hsl(var(--hue), 100%, 30%);
+  background-color: hsl(var(--hue), 100%, 50%);
+  padding: 0.7rem 1.6rem;
+  font-size: 1.7rem;
+  outline: none;
+  color: #fff;
+  border-radius: 0.4rem;
+  cursor: pointer;
+}
+button.quiz__options.correct {
+  --hue: var(--hue-correct);
+}
+button.quiz__options.wrong {
+  --hue: var(--hue-wrong);
+}
+.control__btns {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.control__btns .btn {
+  padding: 1rem 2.7rem;
+  font-size: 1.8rem;
+  border-radius: 0.7rem;
+  border: 1px solid #222;
+  cursor: pointer;
+}
+.hidden {
+  display: none;
+}
+body.correct {
+  --hue: var(--hue-correct);
+}
+body.wrong {
+  --hue: var(--hue-wrong);
+}
+.btn__next,
+.btn__start {
+  --hue: var(--hue-neutral);
+  border: 1px solid hsl(var(--hue), 100%, 30%);
+  color: #fff;
+  background-color: hsl(var(--hue), 100%, 50%);
+}

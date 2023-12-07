@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To-do List App</title>
+    <link rel="stylesheet" href="style.css" />
+    <script
+      defer
+      src="https://kit.fontawesome.com/e575e376f5.js"
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="script.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <h2 class="to-do__heading"><span class="highlight">To-do</span> List</h2>
+      <form class="create__list">
+        <input
+          type="search"
+          name="search"
+          class="list__name"
+          autocomplete="off"
+          placeholder="Create a task"
+          id=""
+        />
+        <button class="list__button">Create</button>
+      </form>
+      <div class="to-do--list__container"></div>
+    </div>
+  </body>
+</html>

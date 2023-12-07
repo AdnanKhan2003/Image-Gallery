@@ -1,0 +1,88 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+/* BASIC STYLING */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+html {
+  font-size: 62.9%;
+}
+
+/* CLOCK CONTAINER */
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  background-color: #ffad84;
+  align-items: center;
+}
+
+/* CLOCK CIRCLE */
+.clock {
+  background-color: #fff6f6;
+  width: 40rem;
+  height: 40rem;
+  border-radius: 50%;
+  border: 18px solid #2d55ac;
+  box-shadow: -3px -4px 4px rgba(0, 0, 0, 0.7), 3px 4px 4px rgba(0, 0, 0, 0.7);
+  position: relative;
+  cursor: pointer;
+}
+.clock::after {
+  content: "";
+  width: 1.8rem;
+  height: 1.8rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #222;
+  border-radius: 50%;
+  z-index: 444;
+}
+.number {
+  position: absolute;
+  font-size: 2rem;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+}
+
+/* CLOCK HAND */
+
+.hand {
+  /* width: 50%;
+  height: 50%; */
+  --rotation-deg: 0;
+  left: 50%;
+  bottom: 50%;
+  transform: translateX(-50%);
+  z-index: 28;
+  width: 0.4rem;
+  position: absolute;
+  transform-origin: bottom;
+  border-top-left-radius: 2rem;
+  border-top-right-radius: 2rem;
+  transform: rotate(calc(var(--rotation-deg) * 1deg));
+}
+.hand-hour {
+  width: 0.2rem;
+  height: 35%;
+  background-color: black;
+  z-index: 92;
+}
+.hand-minute {
+  height: 45%;
+  width: 0.2rem;
+  background-color: gray;
+  background-color: #222;
+}
+.hand-second {
+  background-color: red;
+  width: 0.2rem;
+  height: 30%;
+}
